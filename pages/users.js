@@ -14,11 +14,11 @@ const Users = function(props) {
           Users <small>helpers and seekers</small>
         </PageHeader>
         <div>
-          {props.users.map((user, index) =>
+          {props.users.map((user) =>
             <Media key={user.id}>
               <Media.Left>
                 <Image
-                  src={`http://lorempixel.com/200/200/animals/${index % 10}`}
+                  src={`http://lorempixel.com/200/200/animals/${user.id % 10}`}
                   alt="200x200"
                   width={200}
                   height={200}

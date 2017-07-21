@@ -16,6 +16,10 @@ import {
   Label
 } from "react-bootstrap"
 
+const userListStyle = {
+  textAlign: "center"
+}
+
 const Index = function(props) {
   return (
     <Layout>
@@ -33,7 +37,7 @@ const Index = function(props) {
         </p>
       </Jumbotron>
       <PageHeader>
-        Requests <small>language needs at a specific time an place</small>
+        Requests <small>language needs at a specific time and place</small>
       </PageHeader>
 
       <Grid>
@@ -74,7 +78,7 @@ const Index = function(props) {
       <Grid>
         <Row>
           {props.users.map((user, index) =>
-            <Col xs={6} md={4}>
+            <Col xs={6} md={4} style={userListStyle}>
               <Link
                 as={`/users/${user.id}`}
                 href={`/user_details?id=${user.id}`}

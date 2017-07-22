@@ -14,11 +14,11 @@ const Requests = function(props) {
           Requests <small>what, where and when</small>
         </PageHeader>
         <div>
-          {props.requests.map((request, index) =>
+          {props.requests.map((request) =>
             <Media key={request.id}>
               <Media.Left>
                 <Image
-                  src={`http://lorempixel.com/300/200/city/${index % 10}`}
+                  src={`http://lorempixel.com/300/200/city/${request.id % 10}`}
                   alt="300x200"
                   width={300}
                   height={200}
